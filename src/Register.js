@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import * as React from 'react';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 import './Common.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -34,7 +34,7 @@ function Register() {
 
     return (
         
-        <div class="container">
+        <div class="myContainer">
         <form class="myForm">
             <h1>New User</h1>
 
@@ -69,7 +69,7 @@ function Register() {
                 <option value="INSTRUCTOR">Instructor</option>
             </select>
             <div class="wrapper">
-            <button onClick={(event) => {
+            <button class ="myButton" onClick={(event) => {
 
                 if (formState.name==="" || formState.surname==="" || formState.username==="" || formState.email==="" ) {
 
@@ -103,6 +103,8 @@ function Register() {
             }}>Create</button>
             </div>
         </form>
+
+        <Outlet/>
     </div>
     );
 

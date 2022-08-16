@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Common.css';
 import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
 
@@ -20,7 +22,7 @@ function Login() {
 
     return (
 
-        <div class ="container">
+        <div class ="myContainer">
             <form class="myForm">
                 <h1>Login
                 </h1>
@@ -33,32 +35,42 @@ function Login() {
                 </label>
                 <input autoComplete="off" type="password" id="password" required value={password} onChange={(event) => { console.log(event.target.value); setPassword(event.target.value) }} />
                 <div class="wrapper">
-                <button onClick={(event) => {
+                <button class ="myButton" onClick={(event) => {
 
                     event.preventDefault();
                     const res = getUser();
                     
                     res.then((result) => 
                 
-                {       const user = JSON.parse(JSON.stringify(result.data.user));
+                {       
+                        const user = JSON.parse(result.data.user);
 
-                        console.log(user.role);
+                        if (user.password === "XXXXXXXXXX") {
 
-                        if (user.role === "STUDENT" ) {
+                            toast.error("Username or password is wrong");
 
-                            navigate("/Created",{ state: { password:result.data.password} })
+                        }
+
+                        else if (user.role === "STUDENT" ) {
+
+                            navigate("/Student",{ state: user })
                         
                         }
                         
-                        else if (result.data.responseType === "ASSİSTANT" ) {
+                        else if (user.role  === "ASSİSTANT" ) {
+                                
+                            navigate("/Assistant",{ state: user })
 
                         }
 
-                        else if (result.data.responseType === "INSTRUCTOR" ) {
+                        else if (user.role  === "INSTRUCTOR" ) {
 
+                            navigate("/Instructor",{ state: user })
                         }
 
-                        else if (result.data.responseType === "ADMIN" ) {
+                        else if (user.role === "ADMIN" ) {
+
+                            navigate("/Admin",{ state: user })
 
                         }
                 })

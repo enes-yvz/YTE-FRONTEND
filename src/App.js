@@ -12,9 +12,9 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Outlet 
 } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -24,11 +24,17 @@ function App() {
         <Route path="/Created" element={<Created/>} />
         <Route path="/" element={<Login/>} />
         <Route path="/Home" element={<Home/>} />
-        <Route path="/Register" element={<Register/>} />
+        <Route path="/Register" element={(
+              <>
+                <Admin/>
+                <Outlet/>
+                <Register/>
+              </>
+            )}/>
         <Route path="/Student" element={<Student/>} />
-        <Route path="/Admin" element={<Admin/>} />
-        <Route path="/Instructor" element={<Instructor/>} />
         <Route path="/Assistant" element={<Assistant/>} />
+        <Route path="/Instructor" element={<Instructor/>} />
+        <Route path="/Admin" element={<Admin/>} />  
       </Routes>
       <ToastContainer
         style={{ height:"15%"}}
