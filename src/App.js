@@ -1,13 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
 import Register from './Register';
 import Login from './Login';
-import Home from './Home';
 import Created from './Created';
 import Admin from './Admin';
 import Assistant from './Assistant';
 import Instructor from './Instructor';
 import Student from './Student';
+import ListUsers from './ListUsers';
 import {
   BrowserRouter,
   Routes,
@@ -23,14 +21,20 @@ function App() {
       <Routes>
         <Route path="/Created" element={<Created/>} />
         <Route path="/" element={<Login/>} />
-        <Route path="/Home" element={<Home/>} />
         <Route path="/Register" element={(
               <>
                 <Admin/>
                 <Outlet/>
                 <Register/>
               </>
-            )}/>
+        )}/>
+        <Route path="/ListUsers" element={(
+              <>
+                <Admin/>
+                <Outlet/>
+                <ListUsers/>
+              </>
+        )}/>
         <Route path="/Student" element={<Student/>} />
         <Route path="/Assistant" element={<Assistant/>} />
         <Route path="/Instructor" element={<Instructor/>} />

@@ -36,33 +36,33 @@ function Register() {
         
         <div class="myContainer">
         <form class="myForm">
-            <h1>New User</h1>
+            <h1 class="myH1" >New User</h1>
 
-            <label htmlFor='name'>
+            <label class="myLabel" htmlFor='name'>
                 Name
             </label>
-            <input onChange={onFormInputChange} autoComplete="off" type="text" name="name" required maxLength={25}/>
+            <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="name" required maxLength={25}/>
             
-            <label htmlFor='surname'>
+            <label class="myLabel" htmlFor='surname'>
                 Surname
             </label>
-            <input onChange={onFormInputChange} autoComplete="off" type="text" name="surname" required maxLength={25}/>
+            <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="surname" required maxLength={25}/>
             
-            <label htmlFor='username'>
+            <label class="myLabel" htmlFor='username'>
                 Username
             </label>
-            <input onChange={onFormInputChange} autoComplete="off" type="text" name="username" required maxLength={25}/>
+            <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="username" required maxLength={25}/>
 
-            <label htmlFor='email'>
+            <label class="myLabel" htmlFor='email'>
                 Email Address
             </label>
-            <input onChange={onFormInputChange} autoComplete="off" type="text" name="email" required/>
+            <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="email" required/>
             
-            <label htmlFor='role'>
+            <label class="myLabel" htmlFor='role'>
                 Roles
             </label>
 
-            <select onChange={onFormInputChange} name="role" required defaultValue="Student">
+            <select class = "mySelect" onChange={onFormInputChange} name="role" required defaultValue="Student">
                 <option value="STUDENT">Student</option>
                 <option value="ADMIN">Admin</option>
                 <option value="ASSISTANT">Assistant</option>

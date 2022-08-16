@@ -25,9 +25,7 @@
 }
 
 
-input[type="text"],
-input[type="password"],
-textarea {
+.myInput {
   font-family: 'Nunito', sans-serif;
   font-size: 15px;
   padding: 0.25rem;
@@ -35,12 +33,12 @@ textarea {
 
 }
 
-h1 {
+.myH1 {
 
   margin: 0;
 }
 
-label {
+.myLabel {
   margin-top: 1rem;
 }
 
@@ -63,7 +61,7 @@ label {
 }
 
 
-select {
+.mySelect {
   font-family: 'Nunito', sans-serif;
   font-size: 15px;
   padding: 0.25rem;
@@ -95,3 +93,24 @@ select {
   display: flex;
   justify-content: center;
 }
+
+.customGridFooterContainer {
+  display: none;
+}
+
+.nav-bar-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.myBox {
+
+  margin-top: 100px ;
+}
+
+.myP {
+
+  margin-top: 1rem;
+
+}
+
