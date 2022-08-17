@@ -19,26 +19,26 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path="/Created" element={<Created/>} />
+        <Route path="/created" element={<Created/>} />
         <Route path="/" element={<Login/>} />
-        <Route path="/Register" element={(
+        <Route path="/register" element={(
               <>
                 <Admin/>
                 <Outlet/>
                 <Register/>
               </>
         )}/>
-        <Route path="/ListUsers" element={(
+        <Route path="/listUsers" element={(
               <>
                 <Admin/>
                 <Outlet/>
                 <ListUsers/>
               </>
         )}/>
-        <Route path="/Student" element={<Student/>} />
-        <Route path="/Assistant" element={<Assistant/>} />
-        <Route path="/Instructor" element={<Instructor/>} />
-        <Route path="/Admin" element={<Admin/>} />  
+        <Route path="/student" element={<Student/>} />
+        <Route path="/assistant" element={<Assistant/>} />
+        <Route path="/instructor" element={<Instructor/>} />
+        <Route path="/admin" element={<Admin/>} />  
       </Routes>
       <ToastContainer
         style={{ height:"15%"}}

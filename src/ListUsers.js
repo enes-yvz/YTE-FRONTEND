@@ -61,7 +61,7 @@ function ListUsers() {
 
 
     return (
-        <Box class="myBox" sx={{ height: 300, width: '100%'}}>
+        <Box class="myBox" sx={{ height: 200, width: '100%'}}>
             <DataGrid 
                 rows={users}
                 columns={columns}

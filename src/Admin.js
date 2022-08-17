@@ -14,8 +14,8 @@ function Admin() {
                 <Navbar.Brand >OBYS</Navbar.Brand>
                 <Navbar.Toggle />
                 <Nav className="me-auto">
-                    <Nav.Link href="/Register">Add User</Nav.Link>
-                    <Nav.Link href="/ListUsers">List Users</Nav.Link>
+                    <Nav.Link href="/register">Add User</Nav.Link>
+                    <Nav.Link href="/listUsers">List Users</Nav.Link>
                 </Nav>
                 <Nav>
                     <Nav.Link href="/">Log Out</Nav.Link>

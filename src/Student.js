@@ -15,8 +15,8 @@ function Student() {
                 <Navbar.Brand >OBYS</Navbar.Brand>
                 <Navbar.Toggle />
                 <Nav className="mr-auto">
-                    {/*<Nav.Link eventKey={2} href="#qux">
-              qux
+            {/*<Nav.Link eventKey={2} href="#qux">
+            qux
             </Nav.Link>*/}
                 </Nav>
                 <Nav className="justify-content-end">

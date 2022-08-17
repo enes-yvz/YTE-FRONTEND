@@ -1,5 +1,4 @@
 
-import { useState } from 'react';
 import * as React from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
 import './Common.css';
@@ -22,7 +21,7 @@ function Created() {
                 </section>
                 <div class="wrapper">
                     <button class ="newButton" onClick={(event) => {
-                        navigate("/Home");
+                        navigate("/admin");
                     }}>Main Page</button>
                 </div>
             </form>

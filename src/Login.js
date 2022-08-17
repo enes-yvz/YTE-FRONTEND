@@ -9,8 +9,8 @@ function Login() {
 
     let navigate = useNavigate();
 
-    const [username, setUserName] = useState('');
-    const [password, setPassword] = useState('');
+    const [username, setUserName] = useState("");
+    const [password, setPassword] = useState("");
 
     async function getUser() {
         const res = await axios.post("/login", {
@@ -36,7 +36,7 @@ function Login() {
                 <input class="myInput" autoComplete="off" type="password" id="password" required value={password} onChange={(event) => { console.log(event.target.value); setPassword(event.target.value) }} />
                 <div class="wrapper">
                     <button class="myButton" onClick={(event) => {
-
+                        
                         if (username === "" || password === "" ) {
 
                         }
@@ -44,11 +44,10 @@ function Login() {
                         else {
 
                             event.preventDefault();
+
                             const res = getUser();
 
                             res.then((result) => {
-
-                                console.log(result);
 
                                 const user = JSON.parse(result.data.user);
                                 
@@ -66,24 +65,24 @@ function Login() {
 
                                 else if (user.role === "STUDENT") {
 
-                                    navigate("/Student", { state: user })
+                                    navigate("/student", { state: user })
 
                                 }
 
                                 else if (user.role === "ASSİSTANT") {
 
-                                    navigate("/Assistant", { state: user })
+                                    navigate("/assistant", { state: user })
 
                                 }
 
                                 else if (user.role === "INSTRUCTOR") {
 
-                                    navigate("/Instructor", { state: user })
+                                    navigate("/instructor", { state: user })
                                 }
 
                                 else if (user.role === "ADMIN") {
 
-                                    navigate("/Admin", { state: user })
+                                    navigate("/admin", { state: user })
 
                                 }
                             })
@@ -92,7 +91,6 @@ function Login() {
                     }}>Log In</button>
                     <p class="myP">
                         <span className="line">
-                            {/*put router link here*/}
                             <a href="#">Forgot Password?</a>
                         </span>
                     </p>
