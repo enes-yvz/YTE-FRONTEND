@@ -129,7 +129,6 @@ function Lecture() {
                     }}>Add</button>
                 </div>
             </form>
-
             <Outlet />
         </div>
     );

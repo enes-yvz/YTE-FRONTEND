@@ -123,7 +123,6 @@ function Register() {
                     }}>Create</button>
                 </div>
             </form>
-
             <Outlet />
         </div>
     );

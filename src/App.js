@@ -41,7 +41,13 @@ function App() {
         <Route path="/assistant" element={<Assistant/>} />
         <Route path="/instructor" element={<Instructor/>} />
         <Route path="/admin" element={<Admin/>} />  
-        <Route path="/lecture" element={<Lecture/>} />  
+        <Route path="/lecture" element={(
+              <>
+                <Admin/>
+                <Outlet/>
+                <Lecture/>
+              </>
+        )}/>
       </Routes>
       <ToastContainer
         style={{ height:"15%"}}
