@@ -85,7 +85,7 @@ function Login() {
                     }}>Log In</button>
                     <p class="myP">
                         <span className="line">
-                            <a href="#">Forgot Password?</a>
+                            <a href="/forget">Forgot Password?</a>
                         </span>
                     </p>
                 </div>

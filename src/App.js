@@ -7,6 +7,7 @@ import Instructor from './Instructor';
 import Student from './Student';
 import ListUsers from './ListUsers';
 import Lecture from './Lecture';
+import Forgot from './Forgot';
 
 import {
   BrowserRouter,
@@ -41,6 +42,7 @@ function App() {
         <Route path="/assistant" element={<Assistant/>} />
         <Route path="/instructor" element={<Instructor/>} />
         <Route path="/admin" element={<Admin/>} />  
+        <Route path="/forgot" element={<Forgot/>} />  
         <Route path="/lecture" element={(
               <>
                 <Admin/>
