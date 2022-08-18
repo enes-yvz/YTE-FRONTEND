@@ -1,14 +1,11 @@
 import { useState } from 'react';
 import * as React from 'react';
-import { useNavigate, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import './Common.css';
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 function Lecture() {
-
-    let navigate = useNavigate();
 
     const [formState, setFormState] = useState({
         "name": "",
