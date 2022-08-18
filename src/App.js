@@ -6,6 +6,8 @@ import Assistant from './Assistant';
 import Instructor from './Instructor';
 import Student from './Student';
 import ListUsers from './ListUsers';
+import Lecture from './Lecture';
+
 import {
   BrowserRouter,
   Routes,
@@ -39,6 +41,7 @@ function App() {
         <Route path="/assistant" element={<Assistant/>} />
         <Route path="/instructor" element={<Instructor/>} />
         <Route path="/admin" element={<Admin/>} />  
+        <Route path="/lecture" element={<Lecture/>} />  
       </Routes>
       <ToastContainer
         style={{ height:"15%"}}

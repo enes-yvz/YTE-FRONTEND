@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import * as React from 'react';
-import axios from 'axios';
 import { useNavigate, Outlet } from "react-router-dom";
 import './Common.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-/*
+import axios from 'axios';
 
 function Lecture() {
 
@@ -14,16 +12,16 @@ function Lecture() {
 
     const [formState, setFormState] = useState({
         "name": "",
-        "type": "",
         "code": "",
-        "startTime": "",
-        "endTime": "",
         "location": "",
-        "instructor":""
+        "instructor":"",
+        "startTime": "08:40",
+        "endTime": "09:30",
+        "type": "MANDATORY",
     });
 
-    async function addUser(formState) {
-        //const res = await axios.post("/user", formState);
+    async function addLecture(formState) {
+        const res = await axios.post("/lecture", formState);
         return res;
     }
 
@@ -39,20 +37,15 @@ function Lecture() {
 
         <div class="myContainer">
             <form class="myForm">
-                <h1 class="myH1" >New User</h1>
+                <h1 class="myH1" >New Lecture</h1>
 
                 <label class="myLabel" htmlFor='name'>
                     Name
                 </label>
                 <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="name" required maxLength={25} />
 
-                <label class="myLabel" htmlFor='type'>
-                    Surname
-                </label>
-                <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="type" required maxLength={25} />
-
                 <label class="myLabel" htmlFor='code'>
-                    Username
+                    Code
                 </label>
                 <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="code" required maxLength={25} />
 
@@ -61,11 +54,18 @@ function Lecture() {
                 </label>
                 <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="location" required />
 
-
                 <label class="myLabel" htmlFor='lecturer'>
                     Instructor
                 </label>
                 <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="instructor" required />
+
+                <label class="myLabel" htmlFor='type'>
+                    Type
+                </label>
+                <select class="mySelect" onChange={onFormInputChange} name="type" required defaultValue="MANDATORY">
+                    <option value="MANDATORY">MANDATORY</option>
+                    <option value="OPTIONAL">OPTIONAL</option>
+                </select>
 
                 <label class="myLabel" htmlFor='startTime'>
                     Start Time
@@ -82,28 +82,41 @@ function Lecture() {
                     <option value="16:40">16:40</option>
                 </select>
 
+                <label class="myLabel" htmlFor='endTime'>
+                    End Time
+                </label>
+
+                <select class="mySelect" onChange={onFormInputChange} name="endTime" required defaultValue="08:40">
+                    <option value="09:30">09:30</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:30">12:30</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:30">17:30</option>
+                </select>
 
                 <div class="wrapper">
                     <button class="myButton" onClick={(event) => {
 
-                        if (formState.name === "" || formState.surname === "" || formState.username === "" || formState.email === "") {
+                        if (formState.name === "" || formState.code === "" || formState.location === "" || formState.instructor === "") {
 
                         }
 
                         else {
 
                             event.preventDefault();
-                            const res = addUser(formState);
+                            
+                            const res = addLecture(formState);
+
                             res.then((result) => {
 
                                 if (result.data.responseType === "SUCCESS") {
 
-                                    navigate("/Created", { state: { password: result.data.password } })
-
                                 }
 
                                 else if (result.data.responseType === "ERROR") {
-                                    toast.error("User with same username or email already exist");
 
                                 }
                             }
@@ -113,7 +126,7 @@ function Lecture() {
                         }
 
 
-                    }}>Create</button>
+                    }}>Add</button>
                 </div>
             </form>
 
@@ -124,5 +137,3 @@ function Lecture() {
 }
 
 export default Lecture;
-
-*/

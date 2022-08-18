@@ -51,13 +51,7 @@ function Login() {
 
                                 const user = JSON.parse(result.data.user);
                                 
-                                if(user.valid==="false") {
-                                    
-                                    toast.error("Wrong password");
-
-                                }
-
-                                else if (user.password === "XXXXXXXXXX") {
+                                if (user.password === "XXXXXXXXXX" || user.valid==="false") {
 
                                     toast.error("Invalid username or password");
 
