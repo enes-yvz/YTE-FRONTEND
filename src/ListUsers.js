@@ -5,6 +5,9 @@ import axios from 'axios';
 
 const columns = [
     {
+        width: 150
+    },
+    {
         field: 'id',
         headerName: 'ID',
         width: 250
