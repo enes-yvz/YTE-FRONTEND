@@ -15,11 +15,6 @@ const columns = [
         width: 250
     },
     {
-        field: 'password',
-        headerName: 'Password',
-        width: 250
-    },
-    {
         field: 'name',
         headerName: 'Name',
         width: 250
