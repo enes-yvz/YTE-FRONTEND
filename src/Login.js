@@ -22,20 +22,20 @@ function Login() {
 
     return (
 
-        <div class="myContainer">
-            <form class="myForm">
+        <div className="myContainer">
+            <form className="myForm">
                 <h1>Login
                 </h1>
-                <label class="myLabel" htmlFor='username'>
+                <label className="myLabel" htmlFor='username'>
                     Username
                 </label>
-                <input class="myInput" autoComplete="off" type="text" id="username" required value={username} onChange={(event) => { console.log(event.target.value); setUserName(event.target.value) }} />
-                <label class="myLabel" htmlFor='password'>
+                <input className="myInput" autoComplete="off" type="text" id="username" required value={username} onChange={(event) => { console.log(event.target.value); setUserName(event.target.value) }} />
+                <label className="myLabel" htmlFor='password'>
                     Password
                 </label>
-                <input class="myInput" autoComplete="off" type="password" id="password" required value={password} onChange={(event) => { console.log(event.target.value); setPassword(event.target.value) }} />
-                <div class="wrapper">
-                    <button class="myButton" onClick={(event) => {
+                <input className="myInput" autoComplete="off" type="password" id="password" required value={password} onChange={(event) => { console.log(event.target.value); setPassword(event.target.value) }} />
+                <div className="wrapper">
+                    <button className="myButton" onClick={(event) => {
                         
                         if (username === "" || password === "" ) {
 
@@ -83,7 +83,7 @@ function Login() {
 
                         }
                     }}>Log In</button>
-                    <p class="myP">
+                    <p className="myP">
                         <span className="line">
                             <a href="/forgot">Forgot Password?</a>
                         </span>

@@ -12,15 +12,15 @@ function Created() {
 
     return (
 
-        <div class="myContainer">
-            <form class="newForm">
-                <h1 class="first">User Created Succesfully</h1><br /><br />
-                <section class="myFormWrapperr">
-                    <h1 class="second">Password :</h1>
-                    <h1 class="third">{password}</h1>
+        <div className="myContainer">
+            <form className="newForm">
+                <h1 className="first">User Created Succesfully</h1><br /><br />
+                <section className="myFormWrapperr">
+                    <h1 className="second">Password :</h1>
+                    <h1 className="third">{password}</h1>
                 </section>
-                <div class="wrapper">
-                    <button class ="newButton" onClick={(event) => {
+                <div className="wrapper">
+                    <button className ="newButton" onClick={(event) => {
                         navigate("/admin");
                     }}>Main Page</button>
                 </div>

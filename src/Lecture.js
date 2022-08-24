@@ -32,43 +32,43 @@ function Lecture() {
 
     return (
 
-        <div class="myContainer">
-            <form class="myForm">
-                <h1 class="myH1" >New Lecture</h1>
+        <div className="myContainer">
+            <form className="myForm">
+                <h1 className="myH1" >New Lecture</h1>
 
-                <label class="myLabel" htmlFor='name'>
+                <label className="myLabel" htmlFor='name'>
                     Name
                 </label>
-                <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="name" required maxLength={25} />
+                <input className="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="name" required maxLength={25} />
 
-                <label class="myLabel" htmlFor='code'>
+                <label className="myLabel" htmlFor='code'>
                     Code
                 </label>
-                <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="code" required maxLength={25} />
+                <input className="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="code" required maxLength={25} />
 
-                <label class="myLabel" htmlFor='location'>
+                <label className="myLabel" htmlFor='location'>
                     Location
                 </label>
-                <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="location" required />
+                <input className="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="location" required />
 
-                <label class="myLabel" htmlFor='lecturer'>
+                <label className="myLabel" htmlFor='lecturer'>
                     Instructor
                 </label>
-                <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="instructor" required />
+                <input className="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="instructor" required />
 
-                <label class="myLabel" htmlFor='type'>
+                <label className="myLabel" htmlFor='type'>
                     Type
                 </label>
-                <select class="mySelect" onChange={onFormInputChange} name="type" required defaultValue="MANDATORY">
+                <select className="mySelect" onChange={onFormInputChange} name="type" required defaultValue="MANDATORY">
                     <option value="MANDATORY">MANDATORY</option>
                     <option value="OPTIONAL">OPTIONAL</option>
                 </select>
 
-                <label class="myLabel" htmlFor='startTime'>
+                <label className="myLabel" htmlFor='startTime'>
                     Start Time
                 </label>
 
-                <select class="mySelect" onChange={onFormInputChange} name="startTime" required defaultValue="08:40">
+                <select className="mySelect" onChange={onFormInputChange} name="startTime" required defaultValue="08:40">
                     <option value="08:40">08:40</option>
                     <option value="09:40">09:40</option>
                     <option value="10:40">10:40</option>
@@ -79,11 +79,11 @@ function Lecture() {
                     <option value="16:40">16:40</option>
                 </select>
 
-                <label class="myLabel" htmlFor='endTime'>
+                <label className="myLabel" htmlFor='endTime'>
                     End Time
                 </label>
 
-                <select class="mySelect" onChange={onFormInputChange} name="endTime" required defaultValue="08:40">
+                <select className="mySelect" onChange={onFormInputChange} name="endTime" required defaultValue="08:40">
                     <option value="09:30">09:30</option>
                     <option value="10:30">10:30</option>
                     <option value="11:30">11:30</option>
@@ -94,8 +94,8 @@ function Lecture() {
                     <option value="17:30">17:30</option>
                 </select>
 
-                <div class="wrapper">
-                    <button class="myButton" onClick={(event) => {
+                <div className="wrapper">
+                    <button className="myButton" onClick={(event) => {
 
                         if (formState.name === "" || formState.code === "" || formState.location === "" || formState.instructor === "") {
 

@@ -38,42 +38,42 @@ function Register() {
 
     return (
 
-        <div class="myContainer">
-            <form class="myForm">
-                <h1 class="myH1" >New User</h1>
+        <div className="myContainer">
+            <form className="myForm">
+                <h1 className="myH1" >New User</h1>
 
-                <label class="myLabel" htmlFor='name'>
+                <label className="myLabel" htmlFor='name'>
                     Name
                 </label>
-                <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="name" required maxLength={25} />
+                <input className="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="name" required maxLength={25} />
 
-                <label class="myLabel" htmlFor='surname'>
+                <label className="myLabel" htmlFor='surname'>
                     Surname
                 </label>
-                <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="surname" required maxLength={25} />
+                <input className="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="surname" required maxLength={25} />
 
-                <label class="myLabel" htmlFor='username'>
+                <label className="myLabel" htmlFor='username'>
                     Username
                 </label>
-                <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="username" required maxLength={25} />
+                <input className="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="username" required maxLength={25} />
 
-                <label class="myLabel" htmlFor='email'>
+                <label className="myLabel" htmlFor='email'>
                     Email Address
                 </label>
-                <input class="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="email" required />
+                <input className="myInput" onChange={onFormInputChange} autoComplete="off" type="text" name="email" required />
 
-                <label class="myLabel" htmlFor='role'>
+                <label className="myLabel" htmlFor='role'>
                     Roles
                 </label>
 
-                <select class="mySelect" onChange={onFormInputChange} name="role" required defaultValue="Student">
+                <select className="mySelect" onChange={onFormInputChange} name="role" required defaultValue="Student">
                     <option value="STUDENT">Student</option>
                     <option value="ADMIN">Admin</option>
                     <option value="ASSISTANT">Assistant</option>
                     <option value="INSTRUCTOR">Instructor</option>
                 </select>
-                <div class="wrapper">
-                    <button class="myButton" onClick={(event) => {
+                <div className="wrapper">
+                    <button className="myButton" onClick={(event) => {
 
                         if (formState.name === "" || formState.surname === "" || formState.username === "" || formState.email === "") {
 
