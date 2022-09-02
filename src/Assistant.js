@@ -14,10 +14,11 @@ function Assistant() {
             <Container fluid={true}>
                 <Navbar.Brand >OBYS</Navbar.Brand>
                 <Navbar.Toggle />
-                <Nav className="mr-auto">
+                <Nav className="me-auto">
+                <Nav.Link href="/listLectures">List Lectures</Nav.Link>
                     {/*<Nav.Link eventKey={2} href="#qux">
-          qux
-        </Nav.Link>*/}
+                    qux
+                    </Nav.Link>*/}
                 </Nav>
                 <Nav className="justify-content-end">
                     <Nav.Link href="/">Log Out</Nav.Link>

@@ -17,6 +17,7 @@ function Admin() {
                     <Nav.Link href="/register">Add User</Nav.Link>
                     <Nav.Link href="/listUsers">List Users</Nav.Link>
                     <Nav.Link href="/lecture">Add Lecture</Nav.Link>
+                    <Nav.Link href="/listLecturesAdmin">List Lectures</Nav.Link>
                 </Nav>
                 <Nav>
                     <Nav.Link href="/">Log Out</Nav.Link>

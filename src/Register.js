@@ -100,6 +100,7 @@ function Register() {
                             event.preventDefault();
 
                             const res = addUser(formState);
+                            
                             res.then((result) => {
 
                                 if (result.data.responseType === "SUCCESS") {

@@ -60,6 +60,16 @@
   margin-top: 3rem;
 }
 
+.buttonThird {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  width: 15%;
+  height: 4%;
+  margin-top: 3rem;
+}
+
 
 .mySelect {
   font-family: 'Nunito', sans-serif;
@@ -112,5 +122,11 @@
 
   margin-top: 2rem;
 
+}
+
+.mySecondContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 

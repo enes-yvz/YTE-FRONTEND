@@ -14,7 +14,8 @@ function Student() {
             <Container fluid={true}>
                 <Navbar.Brand >OBYS</Navbar.Brand>
                 <Navbar.Toggle />
-                <Nav className="mr-auto">
+                <Nav className="me-auto">
+                <Nav.Link href="/listLectures">List Lectures</Nav.Link>
             {/*<Nav.Link eventKey={2} href="#qux">
             qux
             </Nav.Link>*/}

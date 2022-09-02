@@ -4,8 +4,13 @@ import { Outlet } from "react-router-dom";
 import './Common.css';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useNavigate, useLocation } from "react-router-dom";
+
 
 function Lecture() {
+
+    let navigate = useNavigate();
 
     const [formState, setFormState] = useState({
         "name": "",
@@ -110,6 +115,8 @@ function Lecture() {
                             res.then((result) => {
 
                                 if (result.data.responseType === "SUCCESS") {
+
+                                    navigate("/lecturecreated")
 
                                 }
 

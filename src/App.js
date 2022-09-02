@@ -6,8 +6,12 @@ import Assistant from './Assistant';
 import Instructor from './Instructor';
 import Student from './Student';
 import ListUsers from './ListUsers';
+import ListLecturesAdmin from './ListLecturesAdmin';
+import ListLectures from './ListLectures';
 import Lecture from './Lecture';
 import Forgot from './Forgot';
+import LectureCreated from './LectureCreated';
+
 
 import {
   BrowserRouter,
@@ -23,6 +27,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/created" element={<Created/>} />
+        <Route path="/lecturecreated" element={<LectureCreated/>} />
         <Route path="/" element={<Login/>} />
         <Route path="/register" element={(
               <>
@@ -36,6 +41,22 @@ function App() {
                 <Admin/>
                 <Outlet/>
                 <ListUsers/>
+              </>
+        )}/>
+        <Route path="/listLecturesAdmin" element={(
+              <>
+                <Admin/>
+                <Outlet/>
+                <ListLecturesAdmin/>
+              </>
+        )}/>
+        <Route path="/listLectures" element={(
+              <>
+                <Student/>
+                <Instructor/>
+                <Assistant/>
+                <Outlet/>
+                <ListLecturesAdmin/>
               </>
         )}/>
         <Route path="/student" element={<Student/>} />
