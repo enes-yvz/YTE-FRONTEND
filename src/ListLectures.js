@@ -35,20 +35,17 @@ function ListLectures() {
         {
             field: 'location',
             headerName: 'Location',
-            width: 250,
-            editable:true
+            width: 250
         },
         {
             field: 'startTime',
             headerName: 'Start Time',
-            width: 250,
-            editable:true
+            width: 250
         },
         {
             field: 'endTime',
             headerName: 'End Time',
-            width: 250,
-            editable:true
+            width: 250
         }
     ]
 

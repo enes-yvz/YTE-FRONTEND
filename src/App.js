@@ -56,7 +56,7 @@ function App() {
                 <Instructor/>
                 <Assistant/>
                 <Outlet/>
-                <ListLecturesAdmin/>
+                <ListLectures/>
               </>
         )}/>
         <Route path="/student" element={<Student/>} />
