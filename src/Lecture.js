@@ -122,6 +122,8 @@ function Lecture() {
 
                                 else if (result.data.responseType === "ERROR") {
 
+                                    toast.error("User can't found")
+
                                 }
                             }
 
